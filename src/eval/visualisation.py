@@ -1,4 +1,4 @@
-from .loading import get_annotations_for_frame_and_camera, load_mot, load_coco, load_individual
+from .annotation_loading import get_annotations_for_frame_and_camera, load_mot, load_coco, load_individual
 from .config import IMAGEDIR, ROOTDIR
 from typing import Optional
 import numpy as np
