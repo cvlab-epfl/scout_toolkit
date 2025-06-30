@@ -1,6 +1,8 @@
 from .loading import get_annotations_for_frame_and_camera, load_mot, load_coco, load_individual
-from .config import IMAGEDIR
+from .config import IMAGEDIR, ROOTDIR
 from typing import Optional
+import numpy as np
+import cv2
 
 
 def get_color_for_instance(instance_id):
@@ -56,6 +58,31 @@ def visualize_detections(image_path, detection_data, return_image=False):
     plt.imshow(image_rgb)
     plt.axis('off')  # Hide axes
     plt.show()
+
+  def load_frame(cam_name, frame_id, root_dir:Union[str, Path]) -> np.ndarray:
+    """
+    Load image and draw 2D bounding boxes from annotations.
+
+    Args:
+        imagepath (str or Path): Path to the image file.
+        annotations (list): List of dicts with keys 'bbox' (dict with x, y, w, h) or 
+                            'bbox' as a list/tuple of [x, y, w, h].
+        color (tuple): Color of the bounding box in BGR.
+        thickness (int): Line thickness for the bounding box.
+
+    Returns:
+        image (np.ndarray): Annotated image.
+    """
+
+    imagepath = root_dir / 'images' / cam_name / f"image_{frame_id}.jpg"
+
+    # Load the image
+    image = cv2.imread(str(imagepath))
+    if image is None:
+        raise FileNotFoundError(f"Could not load image at {imagepath}")
+
+    return image
+  
 
 def visualiser_2d(imagepath, annotations, color=(0, 255, 0), thickness=2):
     """

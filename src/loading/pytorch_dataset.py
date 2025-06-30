@@ -2,6 +2,8 @@ import json
 from torch.utils.data import Dataset, DataLoader
 from typing import Dict, Any, List
 
+
+# TODO: use individual instead
 class AnnotationDataset(Dataset):
     """
     Usage:

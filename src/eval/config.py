@@ -1,3 +1,5 @@
 from pathlib import Path
 
-IMAGEDIR = Path('images')
+
+ROOTDIR = Path('')
+IMAGEDIR = ROOTDIR / 'images'
