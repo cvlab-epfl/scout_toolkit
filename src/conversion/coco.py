@@ -119,7 +119,7 @@ def main():
     parser.add_argument('--output', type=str, default='coco')
 
     args = parser.parse_args()
-    seq_dir = Path(args.image_dir) / f'seq{args.seq_id}'
+    seq_dir = Path(args.image_dir) / f'sequence_0{args.seq_id}'
     # grab an image to determine image size
     first_image = None
     for cam_dir in seq_dir.iterdir():

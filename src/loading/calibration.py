@@ -6,8 +6,8 @@ from pathlib import Path
 Calibration = namedtuple('Calibration', ['K', 'R', 'T', 'dist', 'view_id'])
 
 
-def load_calibration(root_dir, camera_name):
-    filepath = Path(root_dir) / 'calibrations' / f'{camera_name}.json'
+def load_calibration(root_dir, camera_name, sequence):
+    filepath = Path(root_dir) / 'dataset' / 'calibrations' / f'sequence_0{sequence}' /f'{camera_name}.json'
     with open(filepath, 'r') as f:
         calib_dict = json.load(f)
     K = np.array(calib_dict.get("K")) if calib_dict.get("K") is not None else None
