@@ -1,0 +1,8 @@
+numpy
+scipy
+torch
+opencv-python
+matplotlib
+plotly
+trimesh
+notebook
