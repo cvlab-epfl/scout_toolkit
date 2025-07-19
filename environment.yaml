@@ -1,0 +1,26 @@
+name: scout-env
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pytorch
+  - torchvision
+  - torchaudio
+  - opencv
+  - matplotlib
+  - plotly
+  - trimesh
+  - notebook
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - ipympl
+  - nb_conda_kernels
+  - jupyterlab_widgets
+  - pip
+  - pip:
+      - motmetrics
