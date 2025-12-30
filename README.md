@@ -192,7 +192,7 @@ See [`evaluation.ipynb`](evaluation.ipynb) for detailed examples of:
 
 ### Associated Research
 
-- **Paper**: "Unified People Tracking with Graph Neural Networks"
+- **Paper**: "One Graph to Track Them All: Dynamic GNNs for Single- and Multi-View Tracking"
 - **Arxiv**: [https://arxiv.org/abs/2507.08494](https://arxiv.org/abs/2507.08494)
 - **Code Repository**: [https://github.com/cvlab-epfl/umpn](https://github.com/cvlab-epfl/umpn)
 
@@ -203,7 +203,7 @@ If you use this dataset in your research, please cite:
 
 ```bibtex
 @article{engilberge25scout,
-  title = {Unified People Tracking with Graph Neural Networks},
+  title = {One Graph to Track Them All: Dynamic GNNs for Single- and Multi-View Tracking},
   author = {Martin Engilberge and Ivan Vrkic and Friedrich Wilke Grosche 
             and Julien Pilet and Engin Turetken and Pascal Fua},
   journal = {arXiv preprint arXiv:2507.08494},
